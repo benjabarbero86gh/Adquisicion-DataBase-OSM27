@@ -1,0 +1,9 @@
+{
+  "OSM27_Recloser": {
+    "connectorId": "e5ea568f-569b-478a-bb49-39b08e302269",
+    "connectorName": "Modbus Connector",
+    "deviceType": "default",
+    "disconnected": false,
+    "renaming": null
+  }
+}

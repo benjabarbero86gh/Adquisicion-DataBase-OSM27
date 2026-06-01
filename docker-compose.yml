@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  thingsboard:
+    image: thingsboard/tb-postgres:latest
+    container_name: thingsboard
+    restart: always
+    ports:
+      - "8080:9090"
+      - "1883:1883"
+    networks:
+      - tb_net
+    volumes:
+      - tb_data:/data
+      - tb_log:/var/log/thingsboard
+
+  tb-gateway:
+    image: thingsboard/tb-gateway:latest
+    container_name: tb-gateway
+    restart: always
+    depends_on:
+      - thingsboard
+    networks:
+      - tb_net
+    volumes:
+      - ./config:/thingsboard_gateway/config
+      - tb_gw_logs:/thingsboard_gateway/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  tb_net:
+    driver: bridge
+
+volumes:
+  tb_data:
+    external: true
+    name: infra_thingsboard_tb_data
+  tb_log:
+    external: true
+    name: infra_thingsboard_tb_log
+  tb_gw_logs:
+    external: true
+    name: infra_thingsboard_tb_gw_logs

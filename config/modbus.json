@@ -1,0 +1,196 @@
+{
+  "master": {
+    "slaves": [
+      {
+        "type": "tcp",
+        "host": "host.docker.internal",
+        "port": 502,
+        "timeout": 35,
+        "method": "socket",
+        "unitId": 1,
+        "deviceName": "OSM27_Recloser",
+        "pollPeriod": 5000,
+        "timeseriesPollPeriod": 5000,
+        "attributesPollPeriod": 5000,
+        "attributes": [
+          {
+            "tag": "lockout",
+            "type": "bit",
+            "functionCode": 2,
+            "objectsCount": 1,
+            "address": 10001
+          },
+          {
+            "tag": "pickup",
+            "type": "bit",
+            "functionCode": 2,
+            "objectsCount": 1,
+            "address": 10010
+          },
+          {
+            "tag": "estado_abierto",
+            "type": "bit",
+            "functionCode": 2,
+            "objectsCount": 1,
+            "address": 10035
+          },
+          {
+            "tag": "sag",
+            "type": "bit",
+            "functionCode": 2,
+            "objectsCount": 1,
+            "address": 10040
+          },
+          {
+            "tag": "alarma_general",
+            "type": "bit",
+            "functionCode": 2,
+            "objectsCount": 1,
+            "address": 10064
+          },
+          {
+            "tag": "estado_cerrado",
+            "type": "bit",
+            "functionCode": 2,
+            "objectsCount": 1,
+            "address": 10075
+          }
+        ],
+        "timeseries": [
+          {
+            "tag": "ua",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30005,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "ub",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30006,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "uc",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30007,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "uab",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30011,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "ubc",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30012,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "uca",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30013,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "ia",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30001
+          },
+          {
+            "tag": "ib",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30002
+          },
+          {
+            "tag": "ic",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30003
+          },
+          {
+            "tag": "potencia_aparente",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30026
+          },
+          {
+            "tag": "potencia_reactiva",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30027
+          },
+          {
+            "tag": "potencia_activa",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30028
+          },
+          {
+            "tag": "frecuencia",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30061,
+            "multiplier": 0.01
+          },
+          {
+            "tag": "factor_potencia",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30068,
+            "multiplier": 0.001
+          },
+          {
+            "tag": "energia_activa",
+            "type": "32uint",
+            "functionCode": 4,
+            "objectsCount": 2,
+            "address": 30041,
+            "byteOrder": "BIG",
+            "wordOrder": "BIG"
+          },
+          {
+            "tag": "energia_reactiva",
+            "type": "32uint",
+            "functionCode": 4,
+            "objectsCount": 2,
+            "address": 30043,
+            "byteOrder": "BIG",
+            "wordOrder": "BIG"
+          },
+          {
+            "tag": "contador_operaciones",
+            "type": "16uint",
+            "functionCode": 4,
+            "objectsCount": 1,
+            "address": 30075
+          }
+        ]
+      }
+    ]
+  },
+  "id": "e5ea568f-569b-478a-bb49-39b08e302269"
+}
