@@ -9,9 +9,9 @@
         "method": "socket",
         "unitId": 1,
         "deviceName": "OSM27_Recloser",
-        "pollPeriod": 5000,
-        "timeseriesPollPeriod": 5000,
-        "attributesPollPeriod": 5000,
+        "pollPeriod": 2000,
+        "timeseriesPollPeriod": 2000,
+        "attributesPollPeriod": 2000,
         "attributes": [
           {
             "tag": "lockout",
@@ -168,18 +168,14 @@
             "type": "32uint",
             "functionCode": 4,
             "objectsCount": 2,
-            "address": 30041,
-            "byteOrder": "BIG",
-            "wordOrder": "BIG"
+            "address": 30041
           },
           {
             "tag": "energia_reactiva",
             "type": "32uint",
             "functionCode": 4,
             "objectsCount": 2,
-            "address": 30043,
-            "byteOrder": "BIG",
-            "wordOrder": "BIG"
+            "address": 30043
           },
           {
             "tag": "contador_operaciones",
@@ -188,7 +184,9 @@
             "objectsCount": 1,
             "address": 30075
           }
-        ]
+        ],
+        "byteOrder": "BIG",
+        "wordOrder": "BIG"
       }
     ]
   },

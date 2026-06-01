@@ -3,7 +3,7 @@
     "host": "thingsboard",
     "port": 1883,
     "security": {
-      "accessToken": "TU_TOKEN_DE_ACCESO_AQUI"
+      "accessToken": "7mtg1h18uh32tg5yjot3"
     }
   },
   "storage": {
