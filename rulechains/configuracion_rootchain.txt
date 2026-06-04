@@ -1,0 +1,18 @@
+
+Pasos de configuración:
+
+Importar la cadena de control: Importa el archivo JSON de este repositorio en la sección Rule Chains de ThingsBoard.
+
+Abrir la central: Ingresa a la cadena de reglas principal del sistema (Root Rule Chain).
+
+Agregar el nodo de desvío: Desde el panel de herramientas izquierdo (sección Flow), arrastra un nodo de tipo Rule Chain al lienzo.
+
+Vincular el nodo: Haz doble clic en este nuevo nodo y selecciona la cadena que acabas de importar (apertura_cierre_por_dashboard_kiro).
+
+Interceptar el evento: Conecta el nodo inicial Message Type Switch hacia tu nuevo nodo de desvío.
+
+Configurar el filtro (CRÍTICO): Cuando el sistema solicite el Link Label (tipo de enlace), selecciona estrictamente la opción Attributes Updated.
+
+⚠️ Nota importante: No utilices la opción Post attributes. Post attributes captura el polling y la telemetría periódica de los equipos físicos (como un gateway Modbus), mientras que Attributes Updated es el evento específico que se dispara cuando un operador interactúa con un widget en el Dashboard.
+
+Guardar: Aplica los cambios en la Root Rule Chain.
